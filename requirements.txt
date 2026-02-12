@@ -1,5 +1,5 @@
 streamlit
-import numpy as np
-import pandas as pd
-import sk-learn
-import matplotlip.pyplot as plt
+numpy
+pandas
+sk-learn
+matplotlip
