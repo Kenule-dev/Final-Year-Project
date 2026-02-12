@@ -1,8 +1,11 @@
 import streamlit as st
-import numpy as np
-import joblib
+import pandas as pd
 
-model=joblib.load("pollution_model.pkl")
-le = joblib.load("label_encoder.pkl")
-model
-le
+st.title("Upload Your CSV File")
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.write("Dataset Preview:")
+    st.write(df.head())
