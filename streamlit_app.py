@@ -1,5 +1,6 @@
 import streamlit as st
 
-st.title('🎈 App Name')
+import jobliib
 
-st.write('Hello world!')
+model=joblib.load("pollution_model.pkl")
+le = joblib.load("label_encoder.pkl")
